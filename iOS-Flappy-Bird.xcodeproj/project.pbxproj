@@ -14,6 +14,11 @@
 		319722FA1B993E1800BEE1A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 319722F91B993E1800BEE1A1 /* Images.xcassets */; };
 		319722FD1B993E1800BEE1A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319722FB1B993E1800BEE1A1 /* LaunchScreen.xib */; };
 		319723091B993E1800BEE1A1 /* iOS_Flappy_BirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319723081B993E1800BEE1A1 /* iOS_Flappy_BirdTests.swift */; };
+		319723171B9941B900BEE1A1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 319723121B9941B900BEE1A1 /* bg.png */; };
+		319723181B9941B900BEE1A1 /* flappy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 319723131B9941B900BEE1A1 /* flappy1.png */; };
+		319723191B9941B900BEE1A1 /* flappy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 319723141B9941B900BEE1A1 /* flappy2.png */; };
+		3197231A1B9941B900BEE1A1 /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 319723151B9941B900BEE1A1 /* pipe1.png */; };
+		3197231B1B9941B900BEE1A1 /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 319723161B9941B900BEE1A1 /* pipe2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		319723021B993E1800BEE1A1 /* iOS-Flappy-BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Flappy-BirdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		319723071B993E1800BEE1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		319723081B993E1800BEE1A1 /* iOS_Flappy_BirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Flappy_BirdTests.swift; sourceTree = "<group>"; };
+		319723121B9941B900BEE1A1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		319723131B9941B900BEE1A1 /* flappy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy1.png; sourceTree = "<group>"; };
+		319723141B9941B900BEE1A1 /* flappy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy2.png; sourceTree = "<group>"; };
+		319723151B9941B900BEE1A1 /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
+		319723161B9941B900BEE1A1 /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,11 @@
 		319722EB1B993E1800BEE1A1 /* iOS-Flappy-Bird */ = {
 			isa = PBXGroup;
 			children = (
+				319723121B9941B900BEE1A1 /* bg.png */,
+				319723131B9941B900BEE1A1 /* flappy1.png */,
+				319723141B9941B900BEE1A1 /* flappy2.png */,
+				319723151B9941B900BEE1A1 /* pipe1.png */,
+				319723161B9941B900BEE1A1 /* pipe2.png */,
 				319722EE1B993E1800BEE1A1 /* AppDelegate.swift */,
 				319722F21B993E1800BEE1A1 /* GameScene.swift */,
 				319722F41B993E1800BEE1A1 /* GameViewController.swift */,
@@ -196,7 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				319722FD1B993E1800BEE1A1 /* LaunchScreen.xib in Resources */,
+				319723181B9941B900BEE1A1 /* flappy1.png in Resources */,
+				319723191B9941B900BEE1A1 /* flappy2.png in Resources */,
 				319722FA1B993E1800BEE1A1 /* Images.xcassets in Resources */,
+				3197231B1B9941B900BEE1A1 /* pipe2.png in Resources */,
+				319723171B9941B900BEE1A1 /* bg.png in Resources */,
+				3197231A1B9941B900BEE1A1 /* pipe1.png in Resources */,
 				319722F81B993E1800BEE1A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
