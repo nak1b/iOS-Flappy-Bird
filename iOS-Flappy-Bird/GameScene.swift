@@ -38,16 +38,30 @@ class GameScene: SKScene {
         let makeBirdFlap = SKAction.repeatActionForever(animation)
         
         bird = SKSpriteNode(texture: birdTexture)
+        
+        bird.physicsBody = SKPhysicsBody(circleOfRadius: birdTexture.size().height/2.0)
+        bird.physicsBody!.dynamic = true
+        
         bird.position = CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0)
         bird.runAction(makeBirdFlap)
         addChild(bird)
         
+        
+        //ground
+        var ground = SKNode()
+        ground.position = CGPointMake(0, 0)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.frame.size.width, height: 1))
+        ground.physicsBody?.dynamic = false
+        addChild(ground)
         
        
         
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        bird.physicsBody?.velocity = CGVectorMake(0, 0)
+        bird.physicsBody?.applyImpulse(CGVectorMake(0, 50))
+        
     }
    
     override func update(currentTime: CFTimeInterval) {
