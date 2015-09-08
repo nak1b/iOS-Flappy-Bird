@@ -65,14 +65,21 @@ class GameScene: SKScene {
         
         let pipeOffset = CGFloat(movementAmount) - self.frame.size.height/4.0
         
+        let movePipes = SKAction.moveByX(-self.frame.size.width*2 , y: 0, duration: NSTimeInterval(self.frame.size.width/100))
+        let removePipe = SKAction.removeFromParent()
+        
+        let moveAndRemovePipes = SKAction.sequence([movePipes, removePipe])
+        
         var pipeTexture = SKTexture(imageNamed: "pipe1.png")
         pipe1 = SKSpriteNode(texture: pipeTexture)
         pipe1.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0 + pipeTexture.size().height/2 + gapHeight/2.0 + pipeOffset)
+        pipe1.runAction(moveAndRemovePipes)
         addChild(pipe1)
         
         var pipeTexture2 = SKTexture(imageNamed: "pipe2.png")
         pipe2 = SKSpriteNode(texture: pipeTexture2)
         pipe2.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0-pipeTexture2.size().height/2 - gapHeight/2.0 + pipeOffset)
+        pipe2.runAction(moveAndRemovePipes)
         addChild(pipe2)
        
         
