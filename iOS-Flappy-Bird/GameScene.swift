@@ -61,15 +61,18 @@ class GameScene: SKScene {
         
         //pipes
         let gapHeight = birdTexture.size().height * 4
+        let movementAmount = arc4random() % UInt32(self.frame.size.height/2)
+        
+        let pipeOffset = CGFloat(movementAmount) - self.frame.size.height/4.0
         
         var pipeTexture = SKTexture(imageNamed: "pipe1.png")
         pipe1 = SKSpriteNode(texture: pipeTexture)
-        pipe1.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0 + pipeTexture.size().height/2 + gapHeight/2.0)
+        pipe1.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0 + pipeTexture.size().height/2 + gapHeight/2.0 + pipeOffset)
         addChild(pipe1)
         
         var pipeTexture2 = SKTexture(imageNamed: "pipe2.png")
         pipe2 = SKSpriteNode(texture: pipeTexture2)
-        pipe2.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0-pipeTexture2.size().height/2 - gapHeight/2.0)
+        pipe2.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0-pipeTexture2.size().height/2 - gapHeight/2.0 + pipeOffset)
         addChild(pipe2)
        
         
