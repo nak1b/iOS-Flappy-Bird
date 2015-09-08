@@ -11,6 +11,10 @@ import SpriteKit
 class GameScene: SKScene {
     var bird = SKSpriteNode()
     var bg = SKSpriteNode()
+    
+    var pipe1 = SKSpriteNode()
+    var pipe2 = SKSpriteNode()
+    
     override func didMoveToView(view: SKView) {
         
         //bg
@@ -54,6 +58,19 @@ class GameScene: SKScene {
         ground.physicsBody?.dynamic = false
         addChild(ground)
         
+        
+        //pipes
+        let gapHeight = birdTexture.size().height * 4
+        
+        var pipeTexture = SKTexture(imageNamed: "pipe1.png")
+        pipe1 = SKSpriteNode(texture: pipeTexture)
+        pipe1.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0 + pipeTexture.size().height/2 + gapHeight/2.0)
+        addChild(pipe1)
+        
+        var pipeTexture2 = SKTexture(imageNamed: "pipe2.png")
+        pipe2 = SKSpriteNode(texture: pipeTexture2)
+        pipe2.position = CGPoint(x:frame.size.width/2.0, y:frame.size.height/2.0-pipeTexture2.size().height/2 - gapHeight/2.0)
+        addChild(pipe2)
        
         
     }
